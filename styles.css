@@ -10,3 +10,60 @@
 .photo-2{background-image:linear-gradient(0deg,rgba(30,30,30,.12),transparent),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=78&fit=crop'),url('assets/hero-illustration.svg')}
 .photo-3{background-image:linear-gradient(0deg,rgba(30,30,30,.12),transparent),url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=78&fit=crop'),url('assets/hero-illustration.svg')}
 .screen h1:focus{outline:none}
+
+/* DAVIDS V1.2.1 — Correcciones de adaptabilidad móvil.
+   La navegación dispone de cinco destinos y el titular debe fluir sin cortar palabras. */
+@media (max-width: 720px) {
+  .bar-shell, .hero, .hero-copy, .screen { min-width: 0; }
+  .hero-copy { padding-inline: clamp(18px, 5.7vw, 24px); }
+  .hero h1 {
+    max-width: 100%;
+    white-space: normal;
+    font-size: clamp(39px, 10.3vw, 52px);
+    line-height: 1.12;
+    overflow-wrap: normal;
+    letter-spacing: -.045em;
+  }
+  .hero h1 em { display: inline; white-space: normal; }
+  .hero-copy > p { max-width: 100%; }
+  .hero-actions { gap: 12px; }
+  .bottom-nav {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-auto-flow: row;
+    min-width: 0;
+    row-gap: 0;
+    padding: 0 2px env(safe-area-inset-bottom);
+  }
+  .bottom-nav button,
+  .bottom-nav a {
+    min-width: 0;
+    width: 100%;
+    min-height: 68px !important;
+    padding: 8px 1px;
+    font-size: 10px !important;
+    line-height: 1.15;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    gap: 3px;
+  }
+  .bottom-nav a { color: #80643e; }
+  .bottom-nav button span,
+  .bottom-nav a span { font-size: 22px; line-height: 1; }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+  .toast { bottom: calc(84px + env(safe-area-inset-bottom)); }
+}
+@media (max-width: 370px) {
+  .hero h1 { font-size: clamp(36px, 10vw, 39px); }
+  .bar-shell { padding-inline: 16px; gap: 8px; }
+  .hero-copy { padding-inline: 18px; }
+  .header-cta { font-size: 10px; }
+}
+@media (max-width: 720px) {
+  .wizard-shell { grid-template-columns: minmax(0, 1fr); }
+  .wizard-side, .wizard-main, .stepper, .stepper li,
+  .option-grid, .choice-card, .field-grid { min-width: 0; }
+  .option-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stepper li span:first-child { flex: 0 0 31px; }
+  .wizard-actions { flex-wrap: wrap; }
+}
