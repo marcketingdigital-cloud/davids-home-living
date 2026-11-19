@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1300" viewBox="0 0 1100 1300" aria-hidden="true">
+<defs>
+  <linearGradient id="wall" x1="0" x2="1" y1="0" y2="0"><stop stop-color="#e1dace"/><stop offset=".49" stop-color="#f5f0e7"/><stop offset="1" stop-color="#d5d0c6"/></linearGradient>
+  <linearGradient id="floor" x1="0" x2=".5" y1="0" y2="1"><stop stop-color="#c5b9a6"/><stop offset="1" stop-color="#8c8579"/></linearGradient>
+  <linearGradient id="outside" x1="0" x2=".9" y1="0" y2="1"><stop stop-color="#ccd4c2"/><stop offset=".55" stop-color="#a4b2a0"/><stop offset="1" stop-color="#6c7f6f"/></linearGradient>
+  <linearGradient id="sofa" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#ece9e2"/><stop offset="1" stop-color="#bdb9ad"/></linearGradient>
+  <linearGradient id="light" x1="0" x2=".5" y1="0" y2="1"><stop stop-color="#f8f6ef" stop-opacity=".7"/><stop offset="1" stop-color="#d6c8a9" stop-opacity="0"/></linearGradient>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="24"/></filter>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".48" numOctaves="3" seed="5" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".03"/></feComponentTransfer></filter>
+</defs>
+<rect width="1100" height="1300" fill="url(#wall)"/>
+<!-- wall geometry -->
+<rect x="0" y="0" width="43" height="920" fill="#c1b6a7"/><rect x="46" y="0" width="8" height="920" fill="#f5efe5"/>
+<rect x="626" y="0" width="474" height="920" fill="#cec8bc" opacity=".25"/>
+<g opacity=".47" stroke="#bdb4a6" stroke-width="4"><path d="M680 0 V910 M720 0 V910 M760 0 V910 M800 0 V910 M840 0 V910 M880 0 V910 M920 0 V910 M960 0 V910 M1000 0 V910 M1040 0 V910"/></g>
+<!-- tall garden window -->
+<rect x="105" y="62" width="490" height="828" fill="#4f5b54"/><rect x="119" y="75" width="462" height="795" fill="url(#outside)"/>
+<path d="M119 500 Q210 380 285 440 T400 440 T580 480 V870 H119Z" fill="#81957d" opacity=".65"/>
+<path d="M119 630 Q220 530 315 582 T580 570V870H119Z" fill="#627c67" opacity=".5"/>
+<path d="M160 880V460 M240 880V360 M515 880V420" stroke="#435749" stroke-width="17" opacity=".38"/>
+<g fill="#6d856c" opacity=".8"><ellipse cx="185" cy="450" rx="110" ry="170"/><ellipse cx="300" cy="290" rx="120" ry="155"/><ellipse cx="515" cy="400" rx="95" ry="175"/></g>
+<rect x="337" y="75" width="15" height="795" fill="#4e5951"/><rect x="119" y="425" width="462" height="14" fill="#4e5951"/>
+<path d="M110 68 Q180 260 145 820 L85 900 L85 25Z" fill="#f0e8dc" opacity=".82"/>
+<!-- art -->
+<rect x="752" y="190" width="254" height="300" rx="2" fill="#8f8172" opacity=".17"/>
+<rect x="737" y="170" width="254" height="300" fill="#c0a98e"/><rect x="749" y="182" width="230" height="277" fill="#e5ddd0"/>
+<path d="M799 350 Q844 210 922 253 Q950 295 896 382" stroke="#a79d8d" stroke-width="19" fill="none" opacity=".7"/><path d="M765 419 Q850 348 961 412" stroke="#b0a28e" stroke-width="7" fill="none"/>
+<!-- hanging lamp -->
+<path d="M659 0 V204" stroke="#575b54" stroke-width="5"/><ellipse cx="660" cy="210" rx="108" ry="22" stroke="#777567" stroke-width="13" fill="none"/><path d="M577 216 Q659 286 738 216" stroke="#777567" fill="none" stroke-width="3"/>
+<!-- floor -->
+<path d="M0 903H1100V1300H0Z" fill="url(#floor)"/><path d="M0 905H1100" stroke="#b1a58f" stroke-width="13"/>
+<path d="M0 1080L1100 925 M40 1300L1100 1105 M450 1300L1100 1198" stroke="#71695e" stroke-opacity=".18" stroke-width="4"/>
+<!-- rug -->
+<ellipse cx="600" cy="1115" rx="520" ry="174" fill="#e9e4d8"/><ellipse cx="600" cy="1115" rx="480" ry="155" fill="#ccc8bd" opacity=".42"/>
+<ellipse cx="570" cy="941" rx="440" ry="90" fill="#54534b" opacity=".23" filter="url(#shadow)"/>
+<!-- sofa organic back -->
+<rect x="204" y="725" width="758" height="190" rx="90" fill="url(#sofa)"/>
+<path d="M170 822 Q180 751 266 765 H911 Q998 757 1018 837 L997 958 Q994 993 935 995H247Q180 990 172 958Z" fill="#d9d5cb"/>
+<path d="M185 886 Q274 830 378 874 Q485 918 598 877 Q705 838 824 883 Q946 923 1009 874 V952 Q973 997 916 996H258Q183 989 185 951Z" fill="url(#sofa)"/>
+<path d="M183 865Q199 773 280 779L284 950Q193 987 174 912Z" fill="#d0ccc0"/>
+<path d="M1009 858Q986 779 919 783L916 948Q996 980 1023 915Z" fill="#bfb8ab"/>
+<!-- cushions -->
+<path d="M327 773 Q370 751 408 771L442 874Q382 900 329 871Z" fill="#aa9b89"/><path d="M773 774 Q842 735 885 780L890 879Q833 901 779 866Z" fill="#aeb7aa"/>
+<path d="M493 776Q567 760 599 800L584 866Q522 882 483 842Z" fill="#e7e4de"/>
+<!-- legs -->
+<path d="M267 975L253 1034M926 976L944 1030" stroke="#655d51" stroke-width="14"/>
+<!-- table shadow -->
+<ellipse cx="586" cy="1150" rx="228" ry="54" fill="#2d3730" opacity=".22" filter="url(#shadow)"/>
+<!-- coffee table -->
+<path d="M438 1088L453 1180M759 1088L745 1180" stroke="#454b40" stroke-width="11"/>
+<ellipse cx="596" cy="1088" rx="210" ry="64" fill="#373d35"/><ellipse cx="596" cy="1076" rx="210" ry="60" fill="#715a47"/><ellipse cx="596" cy="1070" rx="197" ry="50" fill="#89725d"/>
+<ellipse cx="559" cy="1054" rx="37" ry="13" fill="#e4dfd4"/><path d="M540 1050L545 1004Q558 985 572 1007L578 1050Z" fill="#cfcbc1"/><path d="M556 1005Q539 983 547 975M558 1010Q576 976 567 966" fill="none" stroke="#657969" stroke-width="6"/>
+<rect x="624" y="1036" width="86" height="21" rx="2" fill="#b1a28b" transform="rotate(-9 625 1036)"/>
+<!-- foreground plant -->
+<path d="M98 1073L121 1220" stroke="#414a3d" stroke-width="6"/><g stroke="#586c53" stroke-width="7" fill="none"><path d="M100 1090Q32 970 42 910M112 1120Q183 985 200 917M115 1120Q58 1040 0 1001M115 1170Q190 1079 209 1060M99 1121Q61 975 88 904"/></g><g fill="#6a8065"><ellipse cx="45" cy="930" rx="20" ry="56" transform="rotate(-28 45 930)"/><ellipse cx="196" cy="930" rx="20" ry="50" transform="rotate(29 196 930)"/><ellipse cx="185" cy="1083" rx="17" ry="58" transform="rotate(56 185 1083)"/><ellipse cx="76" cy="915" rx="16" ry="48"/></g>
+<path d="M63 1180H163L153 1295H76Z" fill="#8b8576"/>
+<rect width="1100" height="1300" fill="url(#light)" opacity=".25"/>
+<rect width="1100" height="1300" filter="url(#grain)" opacity=".95"/>
+</svg>
