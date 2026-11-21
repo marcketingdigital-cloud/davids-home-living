@@ -61,7 +61,7 @@
        <label class="consent-option"><input id="ai-consent" type="checkbox"> Acepto que mi foto o descripción se envíe al servicio de IA para crear visualizaciones conceptuales. Las imágenes no se almacenan en DAVIDS.</label>
       </div>
       <button class="action-cta" type="button" id="generate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 1.7 6.3L20 10l-6.3 1.7L12 18l-1.7-6.3L4 10l6.3-1.7L12 2zm7 14 .7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7L19 16z"/></svg>Ver simulación de ejemplo</button>
-    <p class="below-cta" id="mode-hint">Mientras no haya un motor habilitado, este botón solo muestra ejemplos de diseño.</p><div id="generation-status" class="generation-status" role="status" aria-live="polite"></div><button type="button" class="cancel-generation" id="cancel-generation" hidden>Cancelar generación</button><p class="form-alert" id="form-alert" role="alert"></p>
+    <p class="below-cta" id="mode-hint">Mientras no haya un motor habilitado, este botón solo muestra ejemplos de diseño.</p><p class="below-cta"><a id="open-results-v14" href="resultados/" style="display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 17px;border:1px solid #a98d5e;border-radius:10px;color:#594422;background:#fff8eb;font-weight:700;text-decoration:none">Explorar pantalla de resultados V1.4 →</a></p><p class="below-cta">Se traslada la descripción y el estilo, pero no la fotografía. Las propuestas son demostrativas.</p><div id="generation-status" class="generation-status" role="status" aria-live="polite"></div><button type="button" class="cancel-generation" id="cancel-generation" hidden>Cancelar generación</button><p class="form-alert" id="form-alert" role="alert"></p>
    </section>
    <aside class="right-col" aria-label="Propuestas de diseño de DAVIDS">
     <section class="panel live-result" id="ai-result-panel" aria-labelledby="ai-result-title" hidden>
@@ -93,7 +93,7 @@
 <script>
 (function(){'use strict';
 const $=id=>document.getElementById(id);
-const initialContacts={whatsapp:'',email:''}; // Reemplazar por canales oficiales para producción.
+const initialContacts={whatsapp:'5491158227395',email:'marcketing.digital@gmail.com'}; // Contactos provisionales.
 let contacts={...initialContacts};try{contacts={...contacts,...JSON.parse(localStorage.getItem('davids-demo-contactos')||'{}')}}catch(e){}
 const palette=[
  {title:'Moderna cálida',desc:'Un ambiente equilibrado de líneas limpias y texturas naturales.',wall:'#e5dbcc',wood:'#ac855d',floor:'#c0aa8d',sofa:'#e8dac3',detail:'#514f43',led:'#ffdf9a',carpet:'#e7decd',green:'#63815f',items:['Neutros cálidos, arena y roble','Revestimientos de madera y textiles','Luz indirecta cálida, regulable','Control de luces y cortinas']},
@@ -157,6 +157,7 @@ $('configure').addEventListener('click',openDialog);$('cancel-config').addEventL
 function wa(){const msg=encodeURIComponent(summary());let url=contacts.whatsapp?'https://wa.me/'+contacts.whatsapp+'?text='+msg:'https://api.whatsapp.com/send?text='+msg;if(!contacts.whatsapp){notify('WhatsApp de DAVIDS todavía no está configurado. Esta demo no puede enviar la consulta.');return}window.open(url,'_blank','noopener,noreferrer')}
 function email(){if(!contacts.email){notify('El correo de DAVIDS todavía no está configurado. Esta demo no puede enviar la consulta.');return}const mail='mailto:'+(contacts.email||'')+'?subject='+encodeURIComponent('Consulta de remodelación · DAVIDS')+'&body='+encodeURIComponent(summary());window.location.href=mail}
 $('whatsapp').addEventListener('click',wa);$('mobile-wa').addEventListener('click',wa);$('email').addEventListener('click',email);$('mobile-email').addEventListener('click',email);
+$('open-results-v14').addEventListener('click',()=>{try{sessionStorage.setItem('davids-v14-transfer',JSON.stringify({description:$('project-text').value.trim(),style:chosen('styles')[0]}))}catch(e){}});
 window.DAVIDS_BRIDGE={getFile:()=>selectedFile,getPhotoUrl:()=>uploadedObjectUrl,getForm:()=>({description:$('project-text').value.trim(),style:chosen('styles')[0],interventions:chosen('interventions'),budget:chosen('budgets')[0],intensity:chosen('intensities')[0]}),notify,setCompanyContacts:company=>{contacts={...contacts,...Object.fromEntries(Object.entries(company).filter(([,v])=>Boolean(v)))};status();}};
 })();
 </script>

@@ -170,7 +170,7 @@
   });
   document.getElementById('whatsapp-summary').addEventListener('click', () => {
     if (!activeSummary) return;
-    const url = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(activeSummary);
+    const url = 'https://wa.me/5491158227395?text=' + encodeURIComponent(activeSummary);
     window.open(url,'_blank','noopener,noreferrer');
   });
   renderStep(); renderScreen(screenFromHash());
