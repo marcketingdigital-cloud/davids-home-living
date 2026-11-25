@@ -18,7 +18,7 @@
       <nav class="desktop-nav" aria-label="Navegación principal">
         <button type="button" data-nav="inicio" class="nav-link active" aria-current="page">Inicio</button>
         <button type="button" data-nav="servicios" class="nav-link">Servicios</button>
-        <button type="button" data-nav="inspiracion" class="nav-link">Inspiración</button>
+        <a href="./portafolio/" class="nav-link" style="text-decoration:none">Portafolio</a>
         <a href="./estudio-ia.html" class="nav-link" style="color:#896c3d;font-weight:750;text-decoration:none;display:inline-flex;align-items:center">Estudio IA ✦</a>
         <button type="button" data-nav="consultas" class="nav-link">Mis consultas</button>
       </nav>
@@ -68,7 +68,7 @@
 
     <section class="screen" data-screen="inspiracion" id="inspiracion" aria-labelledby="inspire-title" hidden>
       <div class="subhero"><p class="eyebrow dark">ESTILO Y POSIBILIDADES</p><h1 id="inspire-title">Imaginá lo que sigue.</h1><p>Ambientes de referencia para descubrir líneas estéticas, materiales y soluciones.</p></div>
-      <div class="gallery-layout content-width">
+      <div class="gallery-layout content-width"><p style="margin:0 0 20px"><a class="btn btn-dark" href="./portafolio/" style="text-decoration:none">Explorar Portafolio Experience V1.6 ↗</a></p>
         <p class="notice"><strong>Inspiración, no portfolio.</strong> Estas imágenes son referencias visuales de demostración; no representan trabajos realizados por DAVIDS. Se reemplazarán por fotografías reales autorizadas.</p>
         <div class="filter-row" role="group" aria-label="Filtrar inspiración">
           <button type="button" data-filter="todos" class="filter-btn selected" aria-pressed="true">Todos</button><button type="button" data-filter="interiores" class="filter-btn" aria-pressed="false">Interiores</button><button type="button" data-filter="remodelacion" class="filter-btn" aria-pressed="false">Remodelación</button><button type="button" data-filter="tecnologia" class="filter-btn" aria-pressed="false">Tecnología</button>
@@ -107,7 +107,7 @@
   </main>
 
   <footer class="footer"><div class="footer-inner"><div><span class="footer-logo">DAVIDS<span>.</span></span><p>Espacios con identidad.<br>Viviendas que evolucionan.</p></div><div><strong>EXPERIENCIA RESIDENCIAL</strong><p>Remodelación · Decoración · Pintura · Domótica</p></div><div><strong>DEMO V1.2</strong><p>Marca y cobertura a validar. Sin reservas, presupuestos ni generación IA real.</p></div></div></footer>
-  <nav class="bottom-nav" aria-label="Navegación móvil"><button data-nav="inicio" type="button" class="selected" aria-current="page"><span aria-hidden="true">⌂</span>Inicio</button><button data-nav="servicios" type="button"><span aria-hidden="true">▦</span>Servicios</button><a href="./estudio-ia.html" style="text-decoration:none;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;color:#8b6b3b;min-height:53px;font-size:11px;font-weight:650"><span aria-hidden="true">✦</span>Estudio IA</a><button data-nav="proyecto" type="button"><span aria-hidden="true">✎</span>Proyecto</button><button data-nav="consultas" type="button"><span aria-hidden="true">◫</span>Consultas</button></nav>
+  <nav class="bottom-nav" aria-label="Navegación móvil"><button data-nav="inicio" type="button" class="selected" aria-current="page"><span aria-hidden="true">⌂</span>Inicio</button><button data-nav="servicios" type="button"><span aria-hidden="true">▦</span>Servicios</button><a href="./portafolio/" style="text-decoration:none;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;color:#8b6b3b;min-height:53px;font-size:11px;font-weight:650"><span aria-hidden="true">◈</span>Portafolio</a><button data-nav="proyecto" type="button"><span aria-hidden="true">✎</span>Proyecto</button><button data-nav="consultas" type="button"><span aria-hidden="true">◫</span>Consultas</button></nav>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <dialog id="summary-dialog" class="summary-dialog" aria-labelledby="dialog-title"><form method="dialog"><button class="modal-close" aria-label="Cerrar resumen">✕</button></form><p class="eyebrow dark">BORRADOR LOCAL</p><h2 id="dialog-title">Tu solicitud</h2><pre id="summary-text"></pre><div class="modal-actions"><button type="button" class="btn btn-outline" id="copy-summary">Copiar texto</button><button type="button" class="btn btn-dark" id="whatsapp-summary">Compartir por WhatsApp ↗</button></div><p class="fineprint">WhatsApp abrirá un borrador para el contacto provisional de DAVIDS. El envío requiere tu confirmación.</p></dialog>
   <script src="app.js" defer></script>
